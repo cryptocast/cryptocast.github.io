@@ -86,7 +86,7 @@ html {
 	      head.appendChild(script);
 
 
-$.getJSON('https://anyorigin.com/go?url=https%3A//coinmarketcap.com/currencies/'+coin+'/historical-data/%3Fstart%3D'+start+'%26end%3D20190101&&callback=?', function(data){
+$.getJSON('http://anyorigin.com/go?url=http%3A//coinmarketcap.com/currencies/'+coin+'/historical-data/%3Fstart%3D'+start+'%26end%3D20190101&&callback=?', function(data){
     	var myRows=[];
     	var regdata=[];
     	var dates={};
@@ -231,7 +231,7 @@ $.getJSON('https://anyorigin.com/go?url=https%3A//coinmarketcap.com/currencies/'
 	   }
   load_js(d3.select(".coinmarketcap-currency-widget").attr("data-currency"));
   
-  $.getJSON('https://anyorigin.com/go?url=https%3A//api.coinmarketcap.com/v1/ticker/&callback=?', function(coinsr){
+  $.getJSON('http://anyorigin.com/go?url=https%3A//api.coinmarketcap.com/v1/ticker/&callback=?', function(coinsr){
   var coins=coinsr.contents;
 
   coins.forEach(function(d){
