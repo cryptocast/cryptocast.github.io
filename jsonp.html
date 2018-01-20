@@ -77,6 +77,14 @@ html {
 	    .legend({"filters":true})
 	    //.draw()             // finally, draw the visualization!
 
+$.ajax({
+    url: "http://api_test_server.proudlygeek.c9.io/?callback=?",
+    dataType: "jsonp",
+    success: function(data) {
+        console.log(data);    
+    });​​​​​​​​​​​​​​​​​
+
+
 	function load_js(coin)
 	   {
 	      var head= document.getElementsByTagName('head')[0];
@@ -84,7 +92,6 @@ html {
 	      script.type= 'text/javascript';
 	      script.src= '//files.coinmarketcap.com/static/widget/currency.js';
 	      head.appendChild(script);
-
 
 $.getJSON('https://coinmarketcap.com/currencies/'+coin+'/historical-data/%3Fstart%3D'+start+'%26end%3D20190101', function(data){
     	var myRows=[];		var data2=data.contents.slice(data.contents.indexOf('<table class="table">'),data.contents.indexOf('</table>')+8);
